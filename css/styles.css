@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FDEFF9, #E0C3FC, #8EC5FC);
+    color: #2D3142;
+    padding: 20px;
+    overflow: hidden;
+    animation: backgroundShift 8s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundShift {
+    0% {
+        background: linear-gradient(135deg, #FDEFF9, #E0C3FC, #8EC5FC);
+    }
+    100% {
+        background: linear-gradient(135deg, #F3F9D2, #AAC4FF, #8EC5FC);
+    }
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #ffffff, #f8f9fc);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9);
+}
+
+.container h1 {
+    font-size: 3em;
+    color: #4A4E69;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #8EC5FC, #E0C3FC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container h3 {
+    font-size: 1.8em;
+    color: #4A4E69;
+    margin: 20px 0 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out 0.3s;
+}
+
+.container p {
+    font-size: 1.1em;
+    color: #5F6C7B;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in-out 0.6s;
+}
+
+.img-to-text {
+    border: 2px dashed #8EC5FC;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1.5s ease-in-out 0.9s;
+}
+
+.img-to-text:hover {
+    border-color: #AAC4FF;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(142, 197, 252, 0.4);
+}
+
+input[type='file'] {
+    display: none;
+    border: #2D3142;
+}
+
+.label-file {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1em;
+    color: #ffffff;
+    background: linear-gradient(90deg, #E0C3FC, #8EC5FC);
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    border: none;
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out 1.2s;
+}
+
+.label-file:hover {
+    background: linear-gradient(90deg, #AAC4FF, #8EC5FC);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(90deg, #8EC5FC, #AAC4FF);
+    color: #ffffff;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out 1.5s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #AAC4FF, #8EC5FC);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
