@@ -4,16 +4,20 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    overflow-y: auto;
+
+
     background: linear-gradient(135deg, #FDEFF9, #E0C3FC, #8EC5FC);
     color: #2D3142;
     padding: 20px;
-    overflow: hidden;
     animation: backgroundShift 8s infinite alternate ease-in-out;
 }
 
@@ -46,14 +50,13 @@ body {
 
 .container h1 {
     font-size: 3em;
-    color: #4A4E69;
+    color: #4A6572;
     margin-bottom: 15px;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #8EC5FC, #E0C3FC);
+    background: linear-gradient(90deg, #4A90E2, #76D7C4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing: 2px;
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 .container h3 {
@@ -72,19 +75,19 @@ body {
 }
 
 .img-to-text {
-    border: 2px dashed #8EC5FC;
+    border: 2px dashed #76D7C4;
     padding: 25px;
-    text-align: center;
     border-radius: 10px;
-    margin-top: 30px;
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    animation: fadeIn 1.5s ease-in-out 0.9s;
+    background: linear-gradient(145deg, #ffffff, #EFF6F9);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .img-to-text:hover {
-    border-color: #AAC4FF;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(142, 197, 252, 0.4);
+    border-color: #4A90E2;
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(76, 215, 196, 0.3);
 }
 
 input[type='file'] {
@@ -94,41 +97,52 @@ input[type='file'] {
 
 .label-file {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 40px;
     font-size: 1em;
     color: #ffffff;
-    background: linear-gradient(90deg, #E0C3FC, #8EC5FC);
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 30px;
-    border: none;
-    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1.5s ease-in-out 1.2s;
-}
-
-.label-file:hover {
-    background: linear-gradient(90deg, #AAC4FF, #8EC5FC);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-}
-
-button {
-    background: linear-gradient(90deg, #8EC5FC, #AAC4FF);
-    color: #ffffff;
-    padding: 15px 40px;
-    font-size: 1.2em;
-    border: none;
+    background: linear-gradient(90deg, #76D7C4, #4A90E2);
     border-radius: 30px;
     cursor: pointer;
     margin-top: 20px;
-    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+    border: none;
+    transition: background 0.3s, transform 0.2s;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1.5s ease-in-out 1.5s;
+}
+
+.label-file:hover {
+    background: linear-gradient(90deg, #4A90E2, #76D7C4);
+    transform: translateY(-3px);
+}
+
+button {
+    background: linear-gradient(90deg, #4A90E2, #76D7C4);
+    color: #ffffff;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
     background: linear-gradient(90deg, #AAC4FF, #8EC5FC);
     transform: translateY(-5px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+pre#imageTextResult {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #76D7C4;
+    border-radius: 10px;
+    background: #EFF6F9;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    overflow-x: auto;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.05), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
 }
