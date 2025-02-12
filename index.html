@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Convert: Img to Text</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 </head>
 <body>
@@ -16,19 +16,15 @@
   
       <label for="imageInput" class="label-file">Choose your image</label>
       <input type="file" id="imageInput" accept="image/*">
-  
       <button id="convertImageBtn">Convert Image</button>
-  
       <p id="imageFileName"></p>
       <span id="loadingEffect" class="loading-spinner" style="display: none;">⏳ Processing...</span>
-  
       <pre id="imageTextResult" contenteditable="true"></pre>
     </div>
     <footer>
       <p>Developed by <strong>HilTran</strong> | <a href="https://github.com/hiltd2758" target="_blank">GitHub</a></p>
   </footer>
   </div>
-
-<script src="../js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
