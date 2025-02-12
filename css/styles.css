@@ -54,10 +54,11 @@ body {
     margin-bottom: 15px;
     text-transform: uppercase;
     background: linear-gradient(90deg, #4A90E2, #76D7C4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;   
+    --webkit-text-fill-color: transparent;
     animation: fadeIn 1.2s ease-in-out;
 }
+
 
 .container h3 {
     font-size: 1.8em;
@@ -84,11 +85,11 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-.img-to-text:hover {
+/* .img-to-text:hover {
     border-color: #4A90E2;
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(76, 215, 196, 0.3);
-}
+} */
 
 input[type='file'] {
     display: none;
@@ -128,7 +129,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(90deg, #AAC4FF, #8EC5FC);
+    /* background: linear-gradient(90deg, #AAC4FF, #8EC5FC); */
     transform: translateY(-5px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
@@ -145,4 +146,21 @@ pre#imageTextResult {
     color: #333;
     overflow-x: auto;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.05), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Convert: Img to Text</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 </head>
 <body>
-<div class="container">
-  <h1>Image to Text</h1>
-  <div class="img-to-text">
-    <h3>Image to Text</h3>
-    <p>Files support: JPG | PNG | JPEG | GIF | JFIF</p>
-    <label for="imageInput" class="label-file">Choose your image</label>
-    <input type="file" id="imageInput" accept="image/*" onchange="displayImage()">
-    <button onclick="convertImagetoText()"> Convert Image</button>
-
-    <p id="imageFileName"></p>
-    <pre id="imageTextResult" contenteditable="true"></pre>
+  <div class="container">
+    <h1>Image to Text</h1>
+    <div class="img-to-text">
+      <h3>Image to Text</h3>
+      <p>Files support: JPG | PNG | JPEG | GIF | JFIF</p>
+  
+      <label for="imageInput" class="label-file">Choose your image</label>
+      <input type="file" id="imageInput" accept="image/*">
+  
+      <button id="convertImageBtn">Convert Image</button>
+  
+      <p id="imageFileName"></p>
+      <span id="loadingEffect" class="loading-spinner" style="display: none;">⏳ Processing...</span>
+  
+      <pre id="imageTextResult" contenteditable="true"></pre>
+    </div>
+    <footer>
+      <p>Developed by <strong>HilTran</strong> | <a href="https://github.com/hiltd2758" target="_blank">GitHub</a></p>
+  </footer>
   </div>
-</div>
 
-<!-- v5 -->
-
-<script src="js/script.js"></script>
-
+<script src="../js/script.js"></script>
 </body>
-
 </html>
